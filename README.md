@@ -1,7 +1,7 @@
 # Tekken-7-primitive-mod-manager
 So...
 This program is what happens when person who knows little python asks chatGPT to write entire program for them.
-I've wrote max 10 lines.
+I've wrote max 10 lines and glued everything together.
 Now it only works on linux.
 
 ## Usage
