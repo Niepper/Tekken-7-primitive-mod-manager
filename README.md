@@ -5,7 +5,7 @@ I've wrote max 10 lines and glued everything together.
 Now it only works on linux.
 
 ## Usage
-```python ./TMMTEST-with-multi.py (path to archive mod to add)``` when downloading .py file
+```python ./NT7PMM.py (path to archive mod to add)``` when downloading .py file
 or
 ```./NT7PMM (path to archive of mod to add )```
 
