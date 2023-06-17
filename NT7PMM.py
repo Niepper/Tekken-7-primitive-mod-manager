@@ -5,7 +5,7 @@ import sys
 import tempfile
 import zipfile
 import time
-
+import threading
 
 def get_steam_game_location(game_name):
     steam_root = os.path.expanduser("~/.steam/steam")
@@ -233,6 +233,7 @@ def disable_mod():
 
 
 def add_mod(archive_path=None):
+    add_mod.called = True
     clear_screen()
     print("\033[1mAdd a Mod\033[0m")
     print("------")
@@ -446,14 +447,13 @@ def launch_tekken():
     subprocess.run(command, shell=True)
     main_menu()
     
-
+add_mod.called = False
 
 def main_menu():
-    global first_run
-    if len(sys.argv) > 1 and first_run:
+    
+    if len(sys.argv) > 1 and add_mod.called==False:
         file_path = sys.argv[1]
         add_mod(file_path)
-        first_run = False
         
 
     clear_screen()
